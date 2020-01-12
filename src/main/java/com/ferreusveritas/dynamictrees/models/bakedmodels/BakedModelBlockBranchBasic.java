@@ -107,7 +107,7 @@ public class BakedModelBlockBranchBasic implements IBakedModel {
 			}
 		}
 		
-		BlockPart part = new BlockPart(posFrom, posTo, mapFacesIn, null, true);
+		BlockPart part = new BlockPart(posFrom, posTo, mapFacesIn, null, false);
 		SimpleBakedModel.Builder builder = new SimpleBakedModel.Builder(modelBlock, ItemOverrideList.NONE).setTexture(bark);
 		
 		for(Map.Entry<EnumFacing, BlockPartFace> e : part.mapFaces.entrySet()) {
@@ -130,7 +130,7 @@ public class BakedModelBlockBranchBasic implements IBakedModel {
 			mapFacesIn.put(face, new BlockPartFace(null, -1, null, uvface));
 		}
 		
-		BlockPart part = new BlockPart(posFrom, posTo, mapFacesIn, null, true);
+		BlockPart part = new BlockPart(posFrom, posTo, mapFacesIn, null, false);
 		SimpleBakedModel.Builder builder = new SimpleBakedModel.Builder(modelBlock, ItemOverrideList.NONE).setTexture(icon);
 		
 		for(Map.Entry<EnumFacing, BlockPartFace> e : part.mapFaces.entrySet()) {

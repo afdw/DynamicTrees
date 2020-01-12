@@ -108,7 +108,7 @@ public class BakedModelBlockSurfaceRoot implements IBakedModel {
 			}
 		}
 		
-		BlockPart part = new BlockPart(posFrom, posTo, mapFacesIn, null, true);
+		BlockPart part = new BlockPart(posFrom, posTo, mapFacesIn, null, false);
 		SimpleBakedModel.Builder builder = new SimpleBakedModel.Builder(modelBlock, ItemOverrideList.NONE).setTexture(bark);
 		
 		for(Map.Entry<EnumFacing, BlockPartFace> e : part.mapFaces.entrySet()) {
@@ -137,7 +137,7 @@ public class BakedModelBlockSurfaceRoot implements IBakedModel {
 				
 				Vector3f limits[] = ModelUtils.AABBLimits(pieceBoundary);
 				
-				BlockPart part = new BlockPart(limits[0], limits[1], mapFacesIn, null, true);
+				BlockPart part = new BlockPart(limits[0], limits[1], mapFacesIn, null, false);
 				builder.addFaceQuad(face, ModelUtils.makeBakedQuad(part, part.mapFaces.get(face), bark, face, ModelRotation.X0_Y0, false));
 			}
 		}
@@ -166,7 +166,7 @@ public class BakedModelBlockSurfaceRoot implements IBakedModel {
 			mapFacesIn.put(face, new BlockPartFace(null, -1, null, uvface));
 		}
 		
-		BlockPart part = new BlockPart(posFrom, posTo, mapFacesIn, null, true);
+		BlockPart part = new BlockPart(posFrom, posTo, mapFacesIn, null, false);
 		SimpleBakedModel.Builder builder = new SimpleBakedModel.Builder(modelBlock, ItemOverrideList.NONE).setTexture(icon);
 		
 		for(Map.Entry<EnumFacing, BlockPartFace> e : part.mapFaces.entrySet()) {

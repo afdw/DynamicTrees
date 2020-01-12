@@ -88,7 +88,7 @@ public class BakedModelBlockBranchThick extends BakedModelBlockBranchBasic imple
 					BlockFaceUV uvface = new BlockFaceUV(ModelUtils.modUV(ModelUtils.getUVs(partBoundary, face)), getFaceAngle(Axis.Y, face));
 					mapFacesIn.put(face, new BlockPartFace(null, -1, null, uvface));
 					
-					BlockPart part = new BlockPart(limits[0], limits[1], mapFacesIn, null, true);
+					BlockPart part = new BlockPart(limits[0], limits[1], mapFacesIn, null, false);
 					builder.addFaceQuad(face, ModelUtils.makeBakedQuad(part, part.mapFaces.get(face), bark, face, ModelRotation.X0_Y0, false));
 				}
 				
@@ -140,7 +140,7 @@ public class BakedModelBlockBranchThick extends BakedModelBlockBranchBasic imple
 			BlockFaceUV uvface = new BlockFaceUV(uvs, getFaceAngle(Axis.Y, face));
 			mapFacesIn.put(face, new BlockPartFace(null, -1, null, uvface));
 			
-			BlockPart part = new BlockPart(posFrom, posTo, mapFacesIn, null, true);
+			BlockPart part = new BlockPart(posFrom, posTo, mapFacesIn, null, false);
 			builder.addFaceQuad(face, ModelUtils.makeBakedQuad(part, part.mapFaces.get(face), ring, face, ModelRotation.X0_Y0, false));
 		}
 		
